@@ -1,0 +1,255 @@
+22:58:52 INFO  : Registering command handlers for SDK TCF services
+22:58:53 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\labview\AXIS_SM_Pure_Verilog\AXIS_SM_Pure_Verilog.sdk\temp_xsdb_launch_script.tcl
+22:58:58 INFO  : XSCT server has started successfully.
+22:58:58 INFO  : Successfully done setting XSCT server connection channel  
+22:58:58 INFO  : Successfully done setting SDK workspace  
+22:58:58 INFO  : Processing command line option -hwspec C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper.hdf.
+23:01:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:01:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279573393A" && level==0} -index 1' command is executed.
+23:01:13 INFO  : FPGA configured successfully with bitstream "C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:01:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279573393A" && level==0} -index 1' command is executed.
+23:01:36 INFO  : 'fpga -state' command is executed.
+23:01:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:01:36 INFO  : Jtag cable 'Digilent Zybo 210279573393A' is selected.
+23:01:36 INFO  : 'jtag frequency' command is executed.
+23:01:36 INFO  : Sourcing of 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:01:36 INFO  : Context for 'APU' is selected.
+23:01:36 INFO  : Hardware design information is loaded from 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:01:36 INFO  : 'configparams force-mem-access 1' command is executed.
+23:01:36 INFO  : Context for 'APU' is selected.
+23:01:36 INFO  : 'stop' command is executed.
+23:01:37 INFO  : 'ps7_init' command is executed.
+23:01:37 INFO  : 'ps7_post_config' command is executed.
+23:01:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:01:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:01:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:01:37 INFO  : The application 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:01:37 INFO  : 'configparams force-mem-access 0' command is executed.
+23:01:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+loadhw -hw C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+dow C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:01:37 INFO  : Memory regions updated for context APU
+23:01:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:01:37 INFO  : 'con' command is executed.
+23:01:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+con
+----------------End of Script----------------
+
+23:01:37 INFO  : Launch script is exported to file 'C:\Users\labview\AXIS_SM_Pure_Verilog\AXIS_SM_Pure_Verilog.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top.elf_on_local.tcl'
+23:01:46 INFO  : Disconnected from the channel tcfchan#1.
+23:01:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279573393A" && level==0} -index 1' command is executed.
+23:01:47 INFO  : 'fpga -state' command is executed.
+23:01:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:01:47 INFO  : Jtag cable 'Digilent Zybo 210279573393A' is selected.
+23:01:47 INFO  : 'jtag frequency' command is executed.
+23:01:47 INFO  : Sourcing of 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:01:47 INFO  : Context for 'APU' is selected.
+23:01:49 INFO  : Hardware design information is loaded from 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:01:49 INFO  : 'configparams force-mem-access 1' command is executed.
+23:01:49 INFO  : Context for 'APU' is selected.
+23:01:49 INFO  : 'stop' command is executed.
+23:01:49 INFO  : 'ps7_init' command is executed.
+23:01:49 INFO  : 'ps7_post_config' command is executed.
+23:01:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:01:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:01:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:01:49 INFO  : The application 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:01:49 INFO  : 'configparams force-mem-access 0' command is executed.
+23:01:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+loadhw -hw C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+dow C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:01:49 INFO  : Memory regions updated for context APU
+23:01:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:01:49 INFO  : 'con' command is executed.
+23:01:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+con
+----------------End of Script----------------
+
+23:01:49 INFO  : Launch script is exported to file 'C:\Users\labview\AXIS_SM_Pure_Verilog\AXIS_SM_Pure_Verilog.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top.elf_on_local.tcl'
+23:02:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279573393A" && level==0} -index 1' command is executed.
+23:02:13 INFO  : 'fpga -state' command is executed.
+23:02:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:02:14 INFO  : Jtag cable 'Digilent Zybo 210279573393A' is selected.
+23:02:14 INFO  : 'jtag frequency' command is executed.
+23:02:14 INFO  : Sourcing of 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:02:14 INFO  : Context for 'APU' is selected.
+23:02:14 INFO  : Hardware design information is loaded from 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:02:14 INFO  : 'configparams force-mem-access 1' command is executed.
+23:02:14 INFO  : Context for 'APU' is selected.
+23:02:14 INFO  : 'stop' command is executed.
+23:02:14 INFO  : 'ps7_init' command is executed.
+23:02:14 INFO  : 'ps7_post_config' command is executed.
+23:02:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:02:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:14 INFO  : The application 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:02:14 INFO  : 'configparams force-mem-access 0' command is executed.
+23:02:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+loadhw -hw C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+dow C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:02:14 INFO  : Memory regions updated for context APU
+23:02:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:14 INFO  : 'con' command is executed.
+23:02:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+con
+----------------End of Script----------------
+
+23:02:14 INFO  : Launch script is exported to file 'C:\Users\labview\AXIS_SM_Pure_Verilog\AXIS_SM_Pure_Verilog.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top.elf_on_local.tcl'
+23:04:04 INFO  : Disconnected from the channel tcfchan#2.
+23:04:04 WARN  : channel "tcfchan#2" closed
+23:08:58 INFO  : Registering command handlers for SDK TCF services
+23:08:58 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\labview\AXIS_SM_Pure_Verilog\AXIS_SM_Pure_Verilog.sdk\temp_xsdb_launch_script.tcl
+23:09:00 INFO  : XSCT server has started successfully.
+23:09:01 INFO  : Successfully done setting XSCT server connection channel  
+23:09:01 INFO  : Successfully done setting SDK workspace  
+23:09:01 INFO  : Processing command line option -hwspec C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper.hdf.
+23:09:01 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+23:09:03 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1609522708229,  Project:1609522056144
+23:09:03 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper.hdf.
+23:09:03 INFO  : Copied contents of C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+23:09:05 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:09:07 INFO  : 
+23:09:07 INFO  : Updating hardware inferred compiler options for top.
+23:09:07 INFO  : Clearing existing target manager status.
+23:09:07 WARN  : Given IPC port value is invalid. Using default port 2350
+23:09:08 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+23:09:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+23:09:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:09:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279573393A" && level==0} -index 1' command is executed.
+23:09:34 INFO  : FPGA configured successfully with bitstream "C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:10:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279573393A" && level==0} -index 1' command is executed.
+23:10:25 INFO  : 'fpga -state' command is executed.
+23:10:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:10:25 INFO  : Jtag cable 'Digilent Zybo 210279573393A' is selected.
+23:10:25 INFO  : 'jtag frequency' command is executed.
+23:10:25 INFO  : Sourcing of 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:10:25 INFO  : Context for 'APU' is selected.
+23:10:25 INFO  : Hardware design information is loaded from 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:10:25 INFO  : 'configparams force-mem-access 1' command is executed.
+23:10:25 INFO  : Context for 'APU' is selected.
+23:10:25 INFO  : 'stop' command is executed.
+23:10:25 INFO  : 'ps7_init' command is executed.
+23:10:25 INFO  : 'ps7_post_config' command is executed.
+23:10:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:10:25 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:10:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:10:25 INFO  : The application 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:10:25 INFO  : 'configparams force-mem-access 0' command is executed.
+23:10:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+loadhw -hw C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+dow C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:10:25 INFO  : Memory regions updated for context APU
+23:10:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:10:26 INFO  : 'con' command is executed.
+23:10:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+con
+----------------End of Script----------------
+
+23:10:26 INFO  : Launch script is exported to file 'C:\Users\labview\AXIS_SM_Pure_Verilog\AXIS_SM_Pure_Verilog.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top.elf_on_local.tcl'
+23:10:30 INFO  : Disconnected from the channel tcfchan#1.
+23:10:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279573393A" && level==0} -index 1' command is executed.
+23:10:31 INFO  : 'fpga -state' command is executed.
+23:10:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:10:31 INFO  : Jtag cable 'Digilent Zybo 210279573393A' is selected.
+23:10:31 INFO  : 'jtag frequency' command is executed.
+23:10:31 INFO  : Sourcing of 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:10:31 INFO  : Context for 'APU' is selected.
+23:10:32 INFO  : Hardware design information is loaded from 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:10:32 INFO  : 'configparams force-mem-access 1' command is executed.
+23:10:32 INFO  : Context for 'APU' is selected.
+23:10:32 INFO  : 'stop' command is executed.
+23:10:33 INFO  : 'ps7_init' command is executed.
+23:10:33 INFO  : 'ps7_post_config' command is executed.
+23:10:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:10:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:10:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:10:33 INFO  : The application 'C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:10:33 INFO  : 'configparams force-mem-access 0' command is executed.
+23:10:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+loadhw -hw C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+dow C:/Users/labview/AXIS_SM_Pure_Verilog/AXIS_SM_Pure_Verilog.sdk/top/Debug/top.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:10:33 INFO  : Memory regions updated for context APU
+23:10:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:10:33 INFO  : 'con' command is executed.
+23:10:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279573393A"} -index 0
+con
+----------------End of Script----------------
+
+23:10:33 INFO  : Launch script is exported to file 'C:\Users\labview\AXIS_SM_Pure_Verilog\AXIS_SM_Pure_Verilog.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top.elf_on_local.tcl'
+23:10:40 INFO  : Disconnected from the channel tcfchan#2.
+23:10:43 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
