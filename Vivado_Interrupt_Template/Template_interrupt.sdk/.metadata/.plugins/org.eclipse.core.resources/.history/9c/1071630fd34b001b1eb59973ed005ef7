@@ -1,0 +1,25 @@
+
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+
+
+void init()
+{
+
+}
+
+
+int main()
+{
+    init_platform();
+
+    print("Hello World\n\r");
+
+    cleanup_platform();
+    return 0;
+}

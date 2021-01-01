@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER slv_intr
+	OPTION supported_peripherals = (slv_intr);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = slv_intr;
+END DRIVER

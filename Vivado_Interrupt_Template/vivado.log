@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Jan  1 21:56:00 2021
+# Process ID: 844
+# Current directory: C:/Users/labview/Desktop/SoC/Template_interrupt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6276 C:\Users\labview\Desktop\SoC\Template_interrupt\Template_interrupt.xpr
+# Log file: C:/Users/labview/Desktop/SoC/Template_interrupt/vivado.log
+# Journal file: C:/Users/labview/Desktop/SoC/Template_interrupt\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/labview/Desktop/SoC/Template_interrupt/Template_interrupt.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/labview/ip_repo/slv_intr_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 855.926 ; gain = 172.234
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jan  1 21:56:35 2021...
